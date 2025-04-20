@@ -8,7 +8,7 @@ from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain_openai import ChatOpenAI
 import os
 from dotenv import load_dotenv
-from tools import search_tool
+from tools import search_tool, wiki_tool, save_tool
 
 load_dotenv()
 # class of the research response, which will be used to store the response from the LLM.
@@ -45,8 +45,8 @@ prompt = ChatPromptTemplate.from_messages(
 
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, api_key=os.environ.get("OPENAI_API_KEY"))
 response = llm.invoke("What is the capital of Israel?")
-print(response)
-tools = [search_tool]
+# print(response)
+tools = [search_tool, wiki_tool, save_tool]
 agent = create_tool_calling_agent(llm = llm, tools = tools, prompt = prompt)
 # verbose is set to True to print the process  of the LLM.
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
@@ -66,8 +66,3 @@ try:
 except Exception as e:
     print("Error parsing response:", e)
     print("Raw response:", raw_response["output"])
-# flow of the code:
-# 1. Load the environment variables from the .env file
-# 2. Create a class called ResearchResponse that inherits from BaseModel.
-#    This class has four attributes: topic, summary, sources, and tool_used.
-#    The attributes are defined with their types using type hints.
