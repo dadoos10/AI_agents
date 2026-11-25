@@ -1,0 +1,27 @@
+{
+  "name": "MY LIST",
+  "tickers": [
+    "MSGE",
+    "PHOE.TA",
+    "TEVA.TA",
+    "DORL.TA",
+    "AGPU",
+    "TEVA",
+    "AAPL",
+    "GOOG",
+    "SPCX",
+    "IBM",
+    "ASML",
+    "NXSN.TA",
+    "NVDA",
+    "LUMI.TA",
+    "INTC",
+    "GME",
+    "SEDG",
+    "SQQQ",
+    "^VIX",
+    "UVXY",
+    "SPY"
+  ],
+  "volProducts": ["SQQQ", "^VIX", "UVXY"]
+}
