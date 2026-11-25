@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Nav from "./components/Nav";
 import "./globals.css";
 
 function fmt(n, digits = 2) {
@@ -64,6 +65,7 @@ export default function HomePage() {
 
   return (
     <main className="app">
+      <Nav />
       <div className="header">
         <div>
           <h1>MY LIST · מעקב חי</h1>

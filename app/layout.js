@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "MY LIST · Live Watchlist",
-  description: "Live Yahoo Finance watchlist for phone and desktop",
+  title: "Finance Hub · מניות והוצאות Max",
+  description: "מעקב מניות חי וייבוא פירוט חיובים מ־Max",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
-    title: "MY LIST",
+    title: "Finance Hub",
     statusBarStyle: "black-translucent",
   },
   themeColor: "#0b0f14",
